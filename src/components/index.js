@@ -1,5 +1,4 @@
-import icon from './icon.vue'
+import icon from './icon'
+import progress from './progress'
 
-export default {
-  icon
-}
+export default Object.assign({}, icon, progress)

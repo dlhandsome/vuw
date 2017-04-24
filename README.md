@@ -1,5 +1,7 @@
 # vue-weapp
 
+[![travis-ci](https://travis-ci.org/dlhandsome/vue-weapp.svg?branch=master)](https://travis-ci.org/dlhandsome/vue-weapp)
+
 > weapp Components build with Vue.js
 
 ## Build Setup

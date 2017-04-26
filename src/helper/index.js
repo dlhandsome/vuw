@@ -3,10 +3,10 @@
  */
 export default {
   /**
-   * Merge options from element
-   * @param  {Element} elem           Dom element
-   * @param  {Object} defaultOptions weapp component options
-   * @return {Object}                Merged options
+   * Compatible types
+   * @param defaultOptions single prop option
+   * @param v   original value
+   * @returns {*}
    */
   merge (defaultOptions, v) {
     let val

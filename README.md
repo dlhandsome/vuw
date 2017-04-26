@@ -30,15 +30,22 @@ npm test
 ```
 
 ## Finished
+
+### 视图容器
+
+- view
+- scroll-view
    
- - 基础内容
-   - icon
-   - progress
+### 基础内容
+
+- icon
+- progress
 
 ## TODO
 
-- 视图容器
-  - swiper
+### 视图容器
+
+- swiper
 
 - 表单组件
   - button

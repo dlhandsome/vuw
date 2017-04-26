@@ -1,14 +1,14 @@
 <template>
     <div class="weapp-progress">
-      <div class="weapp-progress-bar" :style="_barStyle">
-        <div class="weapp-progress-inner_bar" :style="_innerBarStyle"></div>
+      <div class="weapp-progress-bar" :style="barStyle">
+        <div class="weapp-progress-inner_bar" :style="innerBarStyle"></div>
       </div>
-      <div v-show="_showInfo" class="weapp-progress-percent">{{ _percent + '%' }}</div>
+      <div v-show="showInfo" class="weapp-progress-percent">{{ _percent + '%' }}</div>
     </div>
 </template>
 
 <script>
-  import helper from '@/utils/merge'
+  import helper from '@/helper'
   /**
    * check props
    * @type {{percent: (())}}
@@ -71,16 +71,13 @@
         const { strokeWidth } = props
         return helper.merge(strokeWidth, this.strokeWidth)
       },
-      _showInfo () {
-        return this.showInfo
-      },
-      _barStyle () {
+      barStyle () {
         return {
           height: `${this._strokeWidth}px`,
           backgroundColor: this.backgroundColor
         }
       },
-      _innerBarStyle () {
+      innerBarStyle () {
         return {
           backgroundColor: this.activeColor || this.color,
           width: `${this._percent}%`

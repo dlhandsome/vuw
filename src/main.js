@@ -4,7 +4,9 @@ import Vue from 'vue'
 import weapp from './register'
 import App from './App'
 
-Vue.use(weapp)
+Vue.use(weapp, {
+  prefix: 'weapp'
+})
 
 Vue.config.productionTip = false
 

@@ -4,5 +4,5 @@
 import progress from './progress'
 
 export default {
-  'we-progress': progress
+  progress
 }

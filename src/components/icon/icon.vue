@@ -1,25 +1,21 @@
 <template>
-  <div class="weapp-icon" :class="_class" :style="_style"></div>
+  <div class="weapp-icon" :class="_class" :style="style"></div>
 </template>
 
 <script>
-  import helper from '@/utils/merge'
+  import helper from '@/helper'
   /**
    * [valid description] check props
    * @type {Object}
    */
-  const valid = {
-    type (v) {
-      return !!['success', 'success_no_circle', 'info', 'warn', 'waiting', 'cancel', 'download', 'search', 'clear'].find(key => key === v)
-    }
-  }
+  const VALID_TYPES = ['success', 'success_no_circle', 'info', 'warn', 'waiting', 'cancel', 'download', 'search', 'clear']
 
   const props = {
     'type': {
       type: String,
       default: '',
-      validator (v) {
-        return valid.type(v)
+      validator (type) {
+        return VALID_TYPES.indexOf(type) !== -1
       }
     },
     'size': {
@@ -43,13 +39,13 @@
         return helper.merge(size, this.size)
       },
       _class () {
-        if (valid.type(this.type)) {
+        if (VALID_TYPES.indexOf(this.type) !== -1) {
           return {
             [`weapp-icon-${this.type}`]: true
           }
         }
       },
-      _style () {
+      style () {
         return {
           color: this.color,
           fontSize: `${this._size}px`

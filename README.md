@@ -47,15 +47,15 @@ npm test
 
 - swiper
 
-- 表单组件
-  - button
-  - checkbox
-  - form
-  - input
-  - label
-  - picker
-  - picker-view
-  - radio
-  - slider
-  - switch
-  - textarea
+### 表单组件
+- button
+- checkbox
+- form
+- input
+- label
+- picker
+- picker-view
+- radio
+- slider
+- switch
+- textarea

@@ -21,18 +21,20 @@ icon组件使用
 
 ## 视图容器
 
-### [view](https://mp.weixin.qq.com/debug/wxadoc/dev/component/view.html)
+#### [view](https://mp.weixin.qq.com/debug/wxadoc/dev/component/view.html)
 
-### [scroll-view](https://mp.weixin.qq.com/debug/wxadoc/dev/component/scroll-view.html)
+#### [scroll-view](https://mp.weixin.qq.com/debug/wxadoc/dev/component/scroll-view.html)
 
 ## 基础内容
 
 
 
-### [icon](https://mp.weixin.qq.com/debug/wxadoc/dev/component/icon.html)
+#### [icon](https://mp.weixin.qq.com/debug/wxadoc/dev/component/icon.html)
 
-### [progress](https://mp.weixin.qq.com/debug/wxadoc/dev/component/progress.html)
+#### [progress](https://mp.weixin.qq.com/debug/wxadoc/dev/component/progress.html)
 
 
 
-#### Bugs: welcome [Issues](https://github.com/dlhandsome/vue-weapp/issues/new) or [Fork me](https://github.com/dlhandsome/vue-weapp) and pull requests
+## Bugs || Questions
+
+#### welcome [Issues](https://github.com/dlhandsome/vue-weapp/issues/new) or [Fork me](https://github.com/dlhandsome/vue-weapp) and pull requests

@@ -1,6 +1,6 @@
-import Components from './components'
+import Components from '../packages'
 
-const CONFLICT_TAG = ['view', 'progress', 'button', 'form', 'input', 'label', 'textarea', 'audio', 'video', 'canvas']
+const CONFLICT_TAG = ['view', 'text', 'progress', 'button', 'form', 'input', 'label', 'textarea', 'audio', 'video', 'canvas']
 
 export default {
   install (Vue, { prefix = 'weapp' } = {}) {

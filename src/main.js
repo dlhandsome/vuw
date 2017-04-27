@@ -1,10 +1,10 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
-import weapp from './register'
+import Weapp from './register'
 import App from './App'
 
-Vue.use(weapp, {
+Vue.use(Weapp, {
   prefix: 'weapp'
 })
 

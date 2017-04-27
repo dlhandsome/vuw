@@ -1,15 +1,18 @@
 /**
  * Created by sail on 2017/4/24.
  */
-import Vue from 'vue'
-import Components from '@/components/progress'
+import { destoryVm, testComponent } from '../helper'
+import Components from '../../../packages/progress'
 
 describe('progress.vue', () => {
   let vm
-  it('create', () => {
-    const Constructor = Vue.extend(Components.progress)
 
-    vm = new Constructor().$mount()
+  afterEach(() => {
+    destoryVm(vm)
+  })
+
+  it('create', () => {
+    vm = testComponent(Components.progress)
 
     expect(vm.$el.classList.contains('weapp-progress')).to.true
   })

@@ -3,8 +3,6 @@
 </template>
 
 <script>
-  import helper from '@/helper'
-
   const props = {
     'scrollX': {
       type: Boolean,
@@ -50,22 +48,6 @@
     props,
 
     computed: {
-      _upperThreshold () {
-        const { upperThreshold } = props
-        return helper.merge(upperThreshold, this.upperThreshold)
-      },
-      _lowerThreshold () {
-        const { lowerThreshold } = props
-        return helper.merge(lowerThreshold, this.lowerThreshold)
-      },
-      _scrollTop () {
-        const { scrollTop } = props
-        return helper.merge(scrollTop, this.scrollTop)
-      },
-      _scrollLeft () {
-        const { scrollLeft } = props
-        return helper.merge(scrollLeft, this.scrollLeft)
-      },
       style () {
         return {
           'overflow-x': this.scrollX ? 'scroll' : 'hidden',
@@ -94,11 +76,11 @@
         }
 
         uppers.forEach(upper => {
-          upper <= this._upperThreshold && this.$emit('scrolltoupper')
+          upper <= this.upperThreshold && this.$emit('scrolltoupper')
         })
 
         lowers.forEach(lower => {
-          lower <= this._lowerThreshold && this.$emit('scrolltolower')
+          lower <= this.lowerThreshold && this.$emit('scrolltolower')
         })
       }
     },

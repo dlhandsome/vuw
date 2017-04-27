@@ -2,6 +2,7 @@
   <div class="app">
     <weapp-view :hover="hover" :hover-class="hoverClass" :hover-start-time="hoverStartTime" :hover-stay-time="hoverStayTime" >这是view容器</weapp-view>
     <icon :type="type" :color="color" :size="size"></icon>
+    <weapp-text :selectable="selectable">我是text组件，长按我试试</weapp-text>
     <weapp-progress :percent="percent" :stroke-width="strokeWidth" :backgroundColor="backgroundColor" :show-info="showInfo"/>
     <scroll-view :scroll-y="scrollY" :scroll-top="scrollTop" :scroll-x="scrollX" @scrolltoupper="scrolltoupper" @scrolltolower="scrolltolower">
       <weapp-view class="blue">blueblueblueblueblueblueblueblueblueblueblueblueblueblueblueblueblueblueblueblueblueblueblueblueblueblueblueblueblueblueblueblueblue</weapp-view>
@@ -17,6 +18,10 @@
     hoverClass: 'view-hover',
     hoverStartTime: 200,
     hoverStayTime: 300
+  }
+
+  const textOption = {
+    selectable: false
   }
 
   const scrollViewOption = {
@@ -40,7 +45,7 @@
 
   export default {
     data () {
-      return Object.assign(viewOption, scrollViewOption, iconOption, progressOption)
+      return Object.assign(viewOption, textOption, scrollViewOption, iconOption, progressOption)
     },
     methods: {
       scrolltolower () {

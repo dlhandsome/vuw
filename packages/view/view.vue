@@ -1,15 +1,13 @@
 <template>
   <div class="weapp-view"
-       :class="_class"
-       @touchstart="_touchstart"
-       @touchend="_touchend">
+       :class="[viewClass]"
+       @touchstart="touchstart"
+       @touchend="touchend">
     <slot></slot>
   </div>
 </template>
 
 <script>
-  import helper from '@/helper'
-
   const props = {
     'hover': {
       type: Boolean,
@@ -41,15 +39,7 @@
     props,
 
     computed: {
-      _hoverStartTime () {
-        const { hoverStartTime } = props
-        return helper.merge(hoverStartTime, this.hoverStartTime)
-      },
-      _hoverStayTime () {
-        const { hoverStayTime } = props
-        return helper.merge(hoverStayTime, this.hoverStayTime)
-      },
-      _class () {
+      viewClass () {
         if (!this.hover) return ''
         if (!this.isHover) {
           return ''
@@ -60,17 +50,17 @@
     },
 
     methods: {
-      _touchstart () {
+      touchstart () {
         if (!this.hover) return ''
         setTimeout(() => {
           this.isHover = true
-        }, this._hoverStartTime)
+        }, this.hoverStartTime)
       },
-      _touchend () {
+      touchend () {
         if (!this.hover) return ''
         setTimeout(() => {
           this.isHover = false
-        }, this._hoverStayTime + this._hoverStartTime)
+        }, this.hoverStayTime + this.hoverStartTime)
       }
     }
   }

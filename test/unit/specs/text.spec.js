@@ -2,9 +2,9 @@
  * Created by sail on 2017/4/27.
  */
 import { destoryVm, testComponent } from '../helper'
-import Components from '../../../packages/view'
+import Components from '../../../packages/text'
 
-describe('view.vue', () => {
+describe('text.vue', () => {
   let vm
 
   afterEach(() => {
@@ -12,8 +12,8 @@ describe('view.vue', () => {
   })
 
   it('create', () => {
-    vm = testComponent(Components.view)
+    vm = testComponent(Components.text)
 
-    expect(vm.$el.classList.contains('weapp-view')).to.true
+    expect(vm.$el.classList.contains('weapp-text')).to.true
   })
 })

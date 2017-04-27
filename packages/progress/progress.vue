@@ -3,28 +3,17 @@
       <div class="weapp-progress-bar" :style="barStyle">
         <div class="weapp-progress-inner_bar" :style="innerBarStyle"></div>
       </div>
-      <div v-show="showInfo" class="weapp-progress-percent">{{ _percent + '%' }}</div>
+      <div v-show="showInfo" class="weapp-progress-percent">{{ percent + '%' }}</div>
     </div>
 </template>
 
 <script>
-  import helper from '@/helper'
-  /**
-   * check props
-   * @type {{percent: (())}}
-   */
-  const valid = {
-    percent (v) {
-      return v >= 0 && v <= 100
-    }
-  }
-
   const props = {
     'percent': {
       type: Number,
       default: 0,
-      validator (v) {
-        return valid.percent(v)
+      validator (percent) {
+        return percent >= 0 && percent <= 100
       }
     },
     'showInfo': {
@@ -53,34 +42,22 @@
     }
   }
 
-  /**
-   * 优先级：activeColor > color ，两者均为进度条颜色字段
-   */
-
   export default {
     name: 'progress',
 
     props,
 
     computed: {
-      _percent () {
-        const { percent } = props
-        return helper.merge(percent, this.percent)
-      },
-      _strokeWidth () {
-        const { strokeWidth } = props
-        return helper.merge(strokeWidth, this.strokeWidth)
-      },
       barStyle () {
         return {
-          height: `${this._strokeWidth}px`,
+          height: `${this.strokeWidth}px`,
           backgroundColor: this.backgroundColor
         }
       },
       innerBarStyle () {
         return {
-          backgroundColor: this.activeColor || this.color,
-          width: `${this._percent}%`
+          backgroundColor: this.activeColor || this.color,  // 优先级：activeColor > color ，两者均为进度条颜色字段
+          width: `${this.percent}%`
         }
       }
     }

@@ -33,7 +33,7 @@ color Color   icon的颜色，同css的color
   }
 
   export default {
-    name: 'icon',
+    name: 'w-icon',
 
     props,
 

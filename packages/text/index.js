@@ -3,6 +3,8 @@
  */
 import text from './text'
 
-export default {
-  text
+text.install = function (Vue) {
+  Vue.component(text.name, text)
 }
+
+export default text

@@ -5,8 +5,6 @@
 </template>
 
 <script>
-  let timeout
-
   const props = {
     'selectable': {
       type: Boolean,
@@ -15,7 +13,7 @@
   }
 
   export default {
-    name: 'text',
+    name: 'w-text',
 
     props,
 

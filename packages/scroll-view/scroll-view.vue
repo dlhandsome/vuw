@@ -43,7 +43,7 @@
   }
 
   export default {
-    name: 'scroll-view',
+    name: 'w-scroll-view',
 
     props,
 

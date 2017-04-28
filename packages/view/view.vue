@@ -28,7 +28,7 @@
   }
 
   export default {
-    name: 'view',
+    name: 'w-view',
 
     data () {
       return {

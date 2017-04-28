@@ -3,6 +3,8 @@
  */
 import scrollView from './scroll-view'
 
-export default {
-  'scroll-view': scrollView
+scrollView.install = function (Vue) {
+  Vue.component(scrollView.name, scrollView)
 }
+
+export default scrollView

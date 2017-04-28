@@ -43,7 +43,7 @@
   }
 
   export default {
-    name: 'progress',
+    name: 'w-progress',
 
     props,
 

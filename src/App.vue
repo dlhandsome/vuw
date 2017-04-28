@@ -1,14 +1,14 @@
 <template lang="html">
   <div class="app">
-    <weapp-view :hover="hover" :hover-class="hoverClass" :hover-start-time="hoverStartTime" :hover-stay-time="hoverStayTime" >这是view容器</weapp-view>
-    <icon :type="type" :color="color" :size="size"></icon>
-    <weapp-text :selectable="selectable">我是text组件，长按我试试</weapp-text>
-    <weapp-progress :percent="percent" :stroke-width="strokeWidth" :backgroundColor="backgroundColor" :show-info="showInfo"/>
-    <scroll-view :scroll-y="scrollY" :scroll-top="scrollTop" :scroll-x="scrollX" @scrolltoupper="scrolltoupper" @scrolltolower="scrolltolower">
-      <weapp-view class="blue">blueblueblueblueblueblueblueblueblueblueblueblueblueblueblueblueblueblueblueblueblueblueblueblueblueblueblueblueblueblueblueblueblue</weapp-view>
-      <weapp-view class="red">redredredredredredredredredredredredredredredredredredredredredredredredredredredredredredredredredredredredredredredredredredredredred</weapp-view>
-      <weapp-view class="yellow">yellowyellowyellowyellowyellowyellowyellowyellowyellowyellowyellowyellowyellowyellowyellowyellowyellowyellowyellowyellowyellowyellowyellowyellowyellow</weapp-view>
-    </scroll-view>
+    <w-view :hover="hover" :hover-class="hoverClass" :hover-start-time="hoverStartTime" :hover-stay-time="hoverStayTime" >这是view容器</w-view>
+    <w-icon :type="type" :color="color" :size="size"></w-icon>
+    <w-text :selectable="selectable">我是text组件，长按我试试</w-text>
+    <w-progress :percent="percent" :stroke-width="strokeWidth" :backgroundColor="backgroundColor" :show-info="showInfo"/>
+    <w-scroll-view :scroll-y="scrollY" :scroll-top="scrollTop" :scroll-x="scrollX" @scrolltoupper="scrolltoupper" @scrolltolower="scrolltolower">
+      <w-view class="blue">blue</w-view>
+      <w-view class="red">red</w-view>
+      <w-view class="yellow">yellow</w-view>
+    </w-scroll-view>
   </div>
 </template>
 

@@ -1,4 +1,4 @@
-# vue-weapp
+# vuw
 
 [![travis-ci](https://travis-ci.org/dlhandsome/vue-weapp.svg?branch=master)](https://travis-ci.org/dlhandsome/vue-weapp)
 

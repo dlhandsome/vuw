@@ -1,8 +1,9 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
-import Vuw from './index.js'
 import App from './App'
+import Vuw from '../dist/vuw.js'
+import '../dist/vuw.min.css'
 
 Vue.use(Vuw)
 

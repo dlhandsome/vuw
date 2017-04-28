@@ -4,58 +4,53 @@
 
 > weapp Components build with Vue.js
 
-## Build Setup
+## Quick Start
 
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-
-# run unit tests
-npm run unit
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
+```javascript
+  import Vue from 'vue'
+  import Vuw from '../dist/vuw.js'
+  import '../dist/vuw.min.css'
+  
+  Vue.use(Vuw)
+  
+  // or
+  import Vue from 'vue'
+  import {
+    view,
+    icon
+    // ...
+  } from '../dist/vuw.js'
+  import '../dist/vuw.min.css'
+  
+  Vue.component(view.name, view)
+  Vue.component(icon.name, icon)
 ```
 
-## Finished
+⚠️ 由于小程序组件名部分与原生html标签冲突，vuw默认使用w-前缀
 
-### 视图容器
+> icon
 
-- view
-- scroll-view
-   
-### 基础内容
+```html
+  <w-icon :type="type" :color="color" :size="size"></w-icon>
+```
 
-- icon
-- progress
+```javascript
+  data () {
+    type: 'success',
+    color: 'green',
+    size: 50
+  }
 
-## TODO
+```
 
-### 视图容器
+##CONTRIBUTING
 
-- swiper
+[参与贡献](https://github.com/dlhandsome/vuw/blob/master/CONTRIBUTE.md)
 
-### 表单组件
-- button
-- checkbox
-- form
-- input
-- label
-- picker
-- picker-view
-- radio
-- slider
-- switch
-- textarea
+##LICENSE
+
+[MIT](https://github.com/dlhandsome/vuw/blob/master/LICENSE)
+
+
+
+

@@ -28,7 +28,7 @@
 
 ⚠️ 由于小程序组件名部分与原生html标签冲突，vuw默认使用w-前缀
 
-> icon
+### icon
 
 ```html
   <w-icon :type="type" :color="color" :size="size"></w-icon>
@@ -43,11 +43,11 @@
 
 ```
 
-##CONTRIBUTING
+## CONTRIBUTING
 
 [参与贡献](https://github.com/dlhandsome/vuw/blob/master/CONTRIBUTE.md)
 
-##LICENSE
+## LICENSE
 
 [MIT](https://github.com/dlhandsome/vuw/blob/master/LICENSE)
 

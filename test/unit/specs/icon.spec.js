@@ -2,7 +2,7 @@
  * Created by sail on 2017/4/27.
  */
 import { destoryVm, testComponent } from '../helper'
-import Components from '../../../packages/icon'
+import Icon from '@com/icon'
 
 describe('icon.vue', () => {
   let vm
@@ -12,7 +12,7 @@ describe('icon.vue', () => {
   })
 
   it('create', () => {
-    vm = testComponent(Components.icon)
+    vm = testComponent(Icon)
 
     expect(vm.$el.classList.contains('weapp-icon')).to.true
   })

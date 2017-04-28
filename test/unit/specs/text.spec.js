@@ -2,7 +2,7 @@
  * Created by sail on 2017/4/27.
  */
 import { destoryVm, testComponent } from '../helper'
-import Components from '../../../packages/text'
+import Text from '@com/text'
 
 describe('text.vue', () => {
   let vm
@@ -12,7 +12,7 @@ describe('text.vue', () => {
   })
 
   it('create', () => {
-    vm = testComponent(Components.text)
+    vm = testComponent(Text)
 
     expect(vm.$el.classList.contains('weapp-text')).to.true
   })

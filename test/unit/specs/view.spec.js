@@ -2,7 +2,7 @@
  * Created by sail on 2017/4/27.
  */
 import { destoryVm, testComponent } from '../helper'
-import Components from '../../../packages/view'
+import View from '@com/view'
 
 describe('view.vue', () => {
   let vm
@@ -12,7 +12,7 @@ describe('view.vue', () => {
   })
 
   it('create', () => {
-    vm = testComponent(Components.view)
+    vm = testComponent(View)
 
     expect(vm.$el.classList.contains('weapp-view')).to.true
   })

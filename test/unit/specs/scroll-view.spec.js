@@ -2,7 +2,7 @@
  * Created by sail on 2017/4/27.
  */
 import { destoryVm, testComponent } from '../helper'
-import Components from '../../../packages/scroll-view'
+import ScrollView from '@com/scroll-view'
 
 describe('scroll-view.vue', () => {
   let vm
@@ -12,7 +12,7 @@ describe('scroll-view.vue', () => {
   })
 
   it('create', () => {
-    vm = testComponent(Components['scroll-view'])
+    vm = testComponent(ScrollView)
 
     expect(vm.$el.classList.contains('weapp-scroll-view')).to.true
   })

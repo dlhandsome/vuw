@@ -2,7 +2,7 @@
  * Created by sail on 2017/4/24.
  */
 import { destoryVm, testComponent } from '../helper'
-import Components from '../../../packages/progress'
+import Progress from '@com/progress'
 
 describe('progress.vue', () => {
   let vm
@@ -12,7 +12,7 @@ describe('progress.vue', () => {
   })
 
   it('create', () => {
-    vm = testComponent(Components.progress)
+    vm = testComponent(Progress)
 
     expect(vm.$el.classList.contains('weapp-progress')).to.true
   })

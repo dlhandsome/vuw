@@ -5,9 +5,9 @@
  * @link: https://vuejs.org/v2/guide/unit-testing.html#Writing-Testable-Components
  */
 import Vue from 'vue'
-import Weapp from '@/register'
+import Vuw from '@/index'
 
-Vue.use(Weapp)
+Vue.use(Vuw)
 
 let id = 0
 

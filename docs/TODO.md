@@ -9,6 +9,7 @@
 ### 基础内容
 
 - icon
+- text
 - progress
 
 ## TODO
